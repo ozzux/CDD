@@ -1,0 +1,6 @@
+path: C:\Users\osama\Documents\github\DICA\train_data
+train: images
+val: images
+
+names:
+  0: lesion
