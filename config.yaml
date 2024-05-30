@@ -1,0 +1,6 @@
+path:
+train: images
+val: images
+
+names:
+  15: Face
