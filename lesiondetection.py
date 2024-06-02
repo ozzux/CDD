@@ -2,6 +2,6 @@ from ultralytics import YOLO
 
 model = YOLO('yolomodel.pt')
 
-model.predict(source="IMG LOCATION",show=True) # substitute the image location
+model.predict(source="IMG SOURCE",show=True) # substitute the image location
 
-input()
+input("Press enter to exit.")
