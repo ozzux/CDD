@@ -3,8 +3,8 @@ import os
 import cv2
 
 
-input_dir = 'segmenttdata/train/masks'
-output_dir = 'segmenttdata/train/labels'
+input_dir = 'masks'
+output_dir = 'labels'
 
 for j in os.listdir(input_dir):
     image_path = os.path.join(input_dir, j)
