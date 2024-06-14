@@ -3,19 +3,20 @@ import cv2
 
 model = YOLO('segmentmodel.pt')
 
-results = model.predict(source="All Data/MS/MS_20.png")
+results = model.predict(source="All Data/MS")
 
-masks = results[0].masks.data.numpy()
+i = 0
 
-mask = masks[0]
+for result in results:
+  i += 1
+  masks = result[0].masks.data.numpy()
 
-for msk in masks:
-  mask += msk
+  mask = masks[0]
 
-mask = mask * 255
+  for msk in masks:
+    mask += msk
 
-cv2.imshow('result', mask)
-cv2.waitKey()
+  mask = mask * 255
 
-results[0].show()
-cv2.waitKey()
+  results[0].show()
+  cv2.imwrite(str(i)+".png",mask)
