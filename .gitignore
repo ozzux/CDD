@@ -1,3 +1,5 @@
 _venv
 trainogdata
 segmentationmodel.pt
+__pycache__
+model.keras
